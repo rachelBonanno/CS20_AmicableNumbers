@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <script type = "text/javascript" src = "order.js"></script>
+  <script type = "text/javascript" src = "amicable.js"></script>
   <style>
     .box {
       margin: 20px;
@@ -15,27 +15,21 @@
   <title>Amicable Numbers</title>
 </head>
 <body style="background-color:#FFBB00; color:#000000; text-align: center;">
-<h1 style = "font-size: 70px">Joe's Hotdogs</h1>
+<h1 style = "font-size: 70px">Amicable Calculator</h1>
+
 <div class = "box">
-  <p>
-    <b>Hotdog:</b> $4.25 each
-    <br>
-    <b>Fries:</b> $2.60 each
-    <br>
-    <b>Drinks:</b> $1.50 each
-    <br> <br>
-    10% Discounts on orders $20 and over
-  </p>
-  <button onclick="amount()" >What do you want?</button>
+  <h2>Are these numbers amicable?</h2>
+  <button onclick="inputnum()" >Input Numbers</button>
 </div>
 <div class = "box">
-  <h2>Total:</h2>
-  <p id = "hotdogsprice"></p>
-  <p id = "friesprice"></p>
-  <p id = "drinksprice"></p>
-  <p id = "text"></p>
-  <p id = "tax"></p>
-  <p id = "total"></p>
+  <h2>Amicable Calculator</h2>
+  <form NAME="myform" ACTION="" METHOD="GET">
+    <label for="numone">First number:</label><br>
+    <input type="text" id="numone" name="numone" value=""><br>
+    <label for="numtwo">Second number: </label><br>
+    <input type="text" id="numtwo" name="numtwo" value=""><br>
+    <input type="button" name="submit" value="Submit" onClick="testResults(this.form)">
+  </form>
 </div>
 
 </body>
