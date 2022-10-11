@@ -24,9 +24,13 @@ function amicable(x) {
 }
 
 function factors(x) {
+    const fact = new Array();
+    const fact = [];
+    let w = 0;
     for (let i = 1; i <= x; i++) {
         if (num % i == 0) {
-            console.log(i);
+            fact[w] = i;
+            w++;
         }
     }
 }
