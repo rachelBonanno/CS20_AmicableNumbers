@@ -14,6 +14,7 @@
 
     .userInputs {
       font-size: 20px;
+      text-align: left;
     }
   </style>
   <title>Amicable Numbers</title>
@@ -30,13 +31,15 @@
   <form>
     <div class="userInputs">
       <label for="numone">First Number:</label><br>
-      <input type="text" id="numone" name="numone" placeholder="Enter a number here."/>
+      <input type="text" id="numone" name="numone" style="width: 100%; height: 30px;" placeholder="Enter a number here."/>
     </div>
     <div class="userInputs">
+      <br>
       <label for="numtwo">Second Number:</label><br>
-      <input type="text" id="numtwo" name="numtwo" placeholder="Enter a number here."/>
+      <input type="text" id="numtwo" name="numtwo" style="width: 100%; height: 30px;" placeholder="Enter a number here."/>
     </div>
-    <div class="userInputs">
+    <div class="userInputs" style="text-align: center;">
+      <br>
       <button type="submit">Are these numbers amicable?</button>
     </div>
   </form>

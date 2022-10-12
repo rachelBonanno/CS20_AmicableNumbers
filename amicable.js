@@ -34,25 +34,3 @@ function factors(x) {
         }
     }
 }
-
-function theMessage(input, message, type) {
-    const msg = input.parentNode.querySelector("small");
-    msg.innerText = message;
-    input.className = type ? "success" : "error";
-    return type;
-}
-
-function showError(input, message) {
-    return theMessage(input, message, false);
-}
-
-function showSuccess(input) {
-    return theMessage(input, "", true);
-}
-
-function hasValue(input, message) {
-    if (input.value.trim() === "") {
-        return showError(input, message);
-    }
-    return showSuccess(input);
-}
