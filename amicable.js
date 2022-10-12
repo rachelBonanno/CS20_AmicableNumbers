@@ -1,6 +1,8 @@
+document.getElementById("submit").addEventListener("button", inputnum);
+
 function inputnum() {
-    var numberone = document.getElementById.elements("numone").value;
-    var numbertwo = document.getElementById.elements("numtwo").value;
+    var numberone = document.getElementById("numone").value;
+    var numbertwo = document.getElementById("numtwo").value;
 
     var sumone = 0;
     var sumtwo = 0;
@@ -16,7 +18,7 @@ function inputnum() {
 }
 
 function amicable (sumone, sumtwo, numberone, numbertwo, arraynumone, arraynumtwo) {
-    if ((sumone == numbertwo) && (sumtwo == numberone)) {
+    if ((sumone === numbertwo) && (sumtwo === numberone)) {
         document.getElementById("result").innerHTML = "The numbers:  " + numberone + " and " + numbertwo  + " are amicable";
     } else {
         document.getElementById("result").innerHTML = "The numbers:  " + numberone + " and " + numbertwo + " are amicable";
@@ -25,7 +27,7 @@ function amicable (sumone, sumtwo, numberone, numbertwo, arraynumone, arraynumtw
 }
 
 function factors (array, fact, num) {
-    if (num % fact == 0) {
+    if ((num % fact) === 0) {
             array.push(fact);
             return fact;
     }
