@@ -18,16 +18,16 @@ function inputnum() {
 }
 
 function amicable (sumone, sumtwo, numberone, numbertwo, arraynumone, arraynumtwo) {
-    if ((sumone === numbertwo) && (sumtwo === numberone)) {
+    if ((sumone == numbertwo) && (sumtwo == numberone)) {
         document.getElementById("result").innerHTML = "The numbers:  " + numberone + " and " + numbertwo  + " are amicable";
     } else {
-        document.getElementById("result").innerHTML = "The numbers:  " + numberone + " and " + numbertwo + " are amicable";
+        document.getElementById("result").innerHTML = "The numbers:  " + numberone + " and " + numbertwo + " are not amicable";
     }
     document.getElementById("factors").innerHTML = "The factors of " + numberone + " are " + arraynumone + ".\n The factors of " + numbertwo + " are " + arraynumtwo + ".";
 }
 
 function factors (array, fact, num) {
-    if ((num % fact) === 0) {
+    if ((num % fact) == 0) {
             array.push(fact);
             return fact;
     }
