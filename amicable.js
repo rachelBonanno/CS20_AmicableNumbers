@@ -8,26 +8,20 @@ function inputnum() {
     var arraynumone = [];
     var arraynumtwo = [];
 
-    factorsSum(arraynumone, numone);
-    factorsSum(arraynumtwo, numtwo);
-    document.getElementById("result1").innerHTML = "The numbers:  " + numberone + " and " + numbertwo  + " are amicable";
-    document.getElementById("result2").innerHTML = "The numbers:  " + numberone + " and " + numbertwo + " are amicable";
+    sumone = sum(arraynumone, sumone, numberone);
+    sumtwo = sum(arraynumtwo, sumtwo, numbertwo);
 
+    amicable (sumone, sumtwo, numberone, numbertwo, arraynumone, arraynumtwo);
 
 }
 
-function amicable (x) {
-    let result = 0;
-    for (let i = 2; i <= Math.sqrt(x); i++) {
-        if (x % i == 0) {
-            if (i == (x / i)) {
-                result += i;
-            }
-        } else {
-            result += (i + x / i);
-        }
+function amicable (sumone, sumtwo, numberone, numbertwo, arraynumone, arraynumtwo) {
+    if ((sumone == numbertwo) && (sumtwo == numberone)) {
+        document.getElementById("result").innerHTML = "The numbers:  " + numberone + " and " + numbertwo  + " are amicable";
+    } else {
+        document.getElementById("result").innerHTML = "The numbers:  " + numberone + " and " + numbertwo + " are amicable";
     }
-    return (result + 1);
+    document.getElementById("factors").innerHTML = "The factors of " + numberone + " are " + arraynumone + ".\n The factors of " + numbertwo + " are " + arraynumtwo + ".";
 }
 
 function factors (array, fact, num) {
@@ -40,6 +34,7 @@ function factors (array, fact, num) {
 
 function sum (array, sum, num) {
     for (let i = 1; i <= num; i++) {
-
+        sum += factors(array, i, num);
     }
+    return sum;
 }
