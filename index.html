@@ -21,29 +21,26 @@
 </head>
 <body style="background-color:#FFBB00; color:#000000; text-align: center;">
 <h1 style = "font-size: 70px">Amicable Calculator</h1>
-
-<div class="box">
-  <h2>Are these numbers amicable?</h2>
-  <button onclick="inputnum()">Input Numbers</button>
-</div>
 <div class="box">
   <h2>Amicable Calculator</h2>
   <form>
     <div class="userInputs">
-      <label for="numone">First Number:</label><br>
-      <input type="text" id="numone" name="numone" style="width: 100%; height: 30px;" placeholder="Enter a number here."/>
-    </div>
-    <div class="userInputs">
+      <label>First Number:</label><br>
+      <input type="text" id="numone" name="numone" style="width: 100%; height: 30px;" placeholder="Enter a number here.">
       <br>
-      <label for="numtwo">Second Number:</label><br>
-      <input type="text" id="numtwo" name="numtwo" style="width: 100%; height: 30px;" placeholder="Enter a number here."/>
+      <label>Second Number:</label><br>
+      <input type="text" id="numtwo" name="numtwo" style="width: 100%; height: 30px;" placeholder="Enter a number here.">
     </div>
     <div class="userInputs" style="text-align: center;">
       <br>
-      <button type="submit">Are these numbers amicable?</button>
+      <button type="submit" onclick="inputnum()">Are these numbers amicable?</button>
     </div>
   </form>
 </div>
-
+<div class="box">
+  <h2>Are these numbers amicable?</h2>
+  <div id="result1"></div>
+  <div id="result2"></div>
+</div>
 </body>
 </html>
